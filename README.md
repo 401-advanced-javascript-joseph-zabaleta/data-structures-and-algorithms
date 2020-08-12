@@ -3,6 +3,12 @@
 This is a collection of all my challenges for JavaScript 401.
 
 ## Table of Contents
+### Code Challenges
 - [Code Challenge 01: Reverse an Array](code-challenges/401/01-arrayReverse/README.md)
 - [Code Challenge 02: Insert and Shift an Array](code-challenges/401/02-arrayShift/README.md)
 - [Code-Challenge 03: Binary Search in a sorted 1D Array](code-challenges/401/03-arrayBinarySearch/README.md)
+- Code-Challenge 04: Mock Whiteboard Interview Day
+
+### Data Structures
+
+- [Data-Structures 05: Singly Linked Lists](data-structures/05-linkedList/README.md)
