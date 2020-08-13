@@ -23,10 +23,10 @@
 ---
 
 ## API
-- `insert()`:
-    - fill
-- `includes()`:
-    - fill
+- `insert(value)`:
+    - Creates a new node and adds it to the head of the linked list
+- `includes(value)`:
+    - Searches the values within the linked list for the provided value
 - `toString()`:
-    - fill
+    - Overrides the default toString() method and returns a string representing all the items in the linked list.
 
