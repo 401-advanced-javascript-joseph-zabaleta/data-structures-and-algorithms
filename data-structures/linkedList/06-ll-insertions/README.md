@@ -47,7 +47,7 @@ Extending the `LinkedList` class from Challenge 05. Adding three new methods:
 ---
 
 ## Approach & Efficiency
-
+Extended the previous LinkedList to have three new methods. The first , `append(value)`, It will be O(n) as it while loops over the whole list to the end. A second approach would be to keep track of the tail just like we track the head. This would result in O(1). Next two was `insertBefore`/`insertAfter` Both utilize while loop ending in an O(n) time as the value to insert after/before could be the last node.
 
 ---
 
