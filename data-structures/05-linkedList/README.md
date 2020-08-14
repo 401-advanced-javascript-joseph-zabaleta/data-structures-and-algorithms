@@ -18,15 +18,18 @@
 ---
 
 ## Approach & Efficiency
-
+There were three methods required to start this linked list implementation. First was the insert, this method is O(1) operation as it creates a new node, and places it at the front of our list be re-assigning the head. Next was includes this want resulted in an O(n) it has a while loop involved and will go from start to end in search of a value, so the worst case could be that the value is not inside. Last was toString another O(n) method. This will always go through the entire list and make a string representation of it.
 
 ---
 
 ## API
 - `insert(value)`:
+    - O(1)
     - Creates a new node and adds it to the head of the linked list
 - `includes(value)`:
+    - O(n)
     - Searches the values within the linked list for the provided value
 - `toString()`:
+    - O(n)
     - Overrides the default toString() method and returns a string representing all the items in the linked list.
 
