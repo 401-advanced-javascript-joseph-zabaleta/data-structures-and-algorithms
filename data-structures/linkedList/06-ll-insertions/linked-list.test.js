@@ -121,6 +121,16 @@ describe('Testing Challenge 06 Singly LinkedLists', () => {
             expect(actual).toThrow(expected);
         });
 
+        it('Should raise an error when attempting to insert before an empty linked list', () => {
+            let ll = new LinkedList();
+            let actual = () => {
+                ll.insertBefore(4,5);
+            }
+            let expected = 'Value Error! Can\'t add a value before a value that does not exist.'
+
+            expect(actual).toThrow(expected);
+        });
+
     });
 
 

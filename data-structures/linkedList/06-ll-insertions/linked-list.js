@@ -90,7 +90,7 @@ class LinkedList {
     insertBefore(value, newValue) {
         let current = this.head;
 
-        if (!current.value) {
+        if (!current) {
             throw Error('Value Error! Can\'t add a value before a value that does not exist.');
         };
 
