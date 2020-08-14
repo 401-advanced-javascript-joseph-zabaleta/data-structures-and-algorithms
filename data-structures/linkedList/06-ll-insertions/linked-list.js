@@ -65,7 +65,21 @@ class LinkedList {
 
 
     append(value) {
-        return 0;
+        let current = this.head;
+
+        if (!current) {
+            this.insert(value);
+        };
+
+        while (current) {
+
+            if (current.next == null) {
+                current.next = new Node(value);
+                break;
+            };
+
+            current = current.next;
+        };
     }
 
     /**
