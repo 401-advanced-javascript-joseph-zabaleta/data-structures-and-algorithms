@@ -123,4 +123,34 @@ describe('Testing Challenge 06 Singly LinkedLists', () => {
 
     });
 
+
+    describe('Testing append method', () => {
+
+        it('Should append to an empty linked list', () => {
+            let ll = new LinkedList();
+            ll.append(1);
+
+            let actual = ll.toString();
+            let expected = '{1} -> NULL'
+
+            expect(actual).toEqual(expected);
+
+        });
+
+        it('Should append to the end of linked list', () => {
+            let ll = new LinkedList();
+            ll.insert(2);
+            ll.insert(3);
+            ll.insert(1);
+            ll.append(5);
+
+
+            let actual = ll.toString();
+            let expected = '{1} -> {3} -> {2} -> {5} -> NULL'
+
+            expect(actual).toEqual(expected);
+        });
+
+    });
+
 });

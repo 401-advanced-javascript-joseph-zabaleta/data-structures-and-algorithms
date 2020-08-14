@@ -63,6 +63,11 @@ class LinkedList {
         return output + 'NULL';
     };
 
+
+    append(value) {
+        return 0;
+    }
+
     /**
      * Creates a new node and inserts this node before the given value in the linked list.
      * @param {*} value - Value of an existing node
