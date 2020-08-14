@@ -63,7 +63,10 @@ class LinkedList {
         return output + 'NULL';
     };
 
-
+    /**
+     * Creates a new node and adds it to the end of the linked list.
+     * @param {*} value Any value to be added
+     */
     append(value) {
         let current = this.head;
 
@@ -85,7 +88,7 @@ class LinkedList {
     /**
      * Creates a new node and inserts this node before the given value in the linked list.
      * @param {*} value - Value of an existing node
-     * @param {*} newValue - Value to be added
+     * @param {*} newValue - Any value to be added
      */
     insertBefore(value, newValue) {
         let current = this.head;
@@ -105,6 +108,30 @@ class LinkedList {
             };
 
             if (current.next.value == value) {
+                current.next = new Node(newValue, current.next);
+                break;
+            };
+
+            current = current.next;
+        };
+    }
+
+
+    /**
+     * Creates a new node and inserts this node after the given value in the linked list.
+     * @param {*} value  Value of an existing node
+     * @param {*} newValue Any value to be added
+     */
+    insertAfter(value, newValue) {
+        let current = this.head;
+
+        if (!current) {
+            throw Error('Value Error! Can\'t add a value after a value that does not exist.');
+        };
+
+        while (current) {
+
+            if (current.value == value) {
                 current.next = new Node(newValue, current.next);
                 break;
             };

@@ -163,4 +163,44 @@ describe('Testing Challenge 06 Singly LinkedLists', () => {
 
     });
 
+    describe('Testing insertAfter method', () => {
+
+        it('Should raise an error when attempting to insert after an empty linked list', () => {
+            let ll = new LinkedList();
+
+            let actual = () => {
+                ll.insertAfter(3, 5);
+            };
+            let expected = 'Value Error! Can\'t add a value after a value that does not exist.'
+
+            expect(actual).toThrow(expected);
+        });
+
+        it('Should insert after given value within the linked list Test 1', () => {
+            let ll = new LinkedList();
+            ll.insert(2);
+            ll.insert(3);
+            ll.insert(1);
+            ll.insertAfter(3,5);
+
+            let actual = ll.toString();
+            let expected = '{1} -> {3} -> {5} -> {2} -> NULL';
+
+            expect(actual).toEqual(expected);
+        });
+
+        it('Should insert after given value within the linked list Test 2', () => {
+            let ll = new LinkedList();
+            ll.insert(2);
+            ll.insert(2);
+            ll.insert(1);
+            ll.insertAfter(2,5);
+
+            let actual = ll.toString();
+            let expected = '{1} -> {2} -> {5} -> {2} -> NULL';
+
+            expect(actual).toEqual(expected);
+        });
+
+    });
 });
