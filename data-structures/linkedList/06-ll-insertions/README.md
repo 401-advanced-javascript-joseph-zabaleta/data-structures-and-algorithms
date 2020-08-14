@@ -52,4 +52,4 @@ Extended the previous LinkedList to have three new methods. The first , `append(
 ---
 
 ## Solution
-![White Board Image]()
+![White Board Image](../../../assets/llInsertions.png)
