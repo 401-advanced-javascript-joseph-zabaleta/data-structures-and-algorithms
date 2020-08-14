@@ -165,12 +165,3 @@ describe('Testing challenge 4', () => {
     expect(validatePhoneNumber('55_55_5555')).toBeFalsy();
   });
 });
-
-xdescribe('Testing challenge 5', () => {
-  test('It should return the closing tags', () => {
-    expect(findTagNames(['<h1>Hello, world!</h1>', '<p>Welcome to my site</p>'])).toStrictEqual(['/h1', '/p']);
-  });
-  test('It should work if there are multiple closing tags in a single string', () => {
-    expect(findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>'])).toStrictEqual(['/h1', '/div', '/p']);
-  });
-});
