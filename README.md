@@ -11,4 +11,5 @@ This is a collection of all my challenges for JavaScript 401.
 
 ### Data Structures
 
-- [Data-Structures 05: Singly Linked Lists](data-structures/05-linkedList/README.md)
+- [Data-Structures 05: Singly Linked Lists](data-structures/linkedList/05-linkedList/README.md)
+- [Data-Structures 06: Linked List Insertions](data-structures/linkedList/06-ll-insertions/README.md)
