@@ -277,26 +277,3 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
-  test('It should check if url is https', () => {
-
-    expect(isSecure('http://www.insecure.com')).toBe(false);
-    expect(isSecure('https://secure.com')).toBe(true);
-    expect(isSecure('https:/missingslash.org')).toBe(false);
-  });
-});
-
-xdescribe('Testing challenge 6', () => {
-  test('It should return true if there are three in a row', () => {
-    expect(detectTicTacToeWin([['X', '', 'O'], ['X', 'O', ''], ['X', 'O', 'X']])).toStrictEqual(true);
-    expect(detectTicTacToeWin([['O', '', 'X'], ['X', 'O', 'X'], ['X', '', 'O']])).toStrictEqual(true);
-  });
-
-  test('It should return false if there are not three in a row', () => {
-    expect(detectTicTacToeWin([['X', '', 'O'], ['O', 'O', ''], ['X', 'O', 'X']])).toStrictEqual(false);
-  });
-
-  test('It should not treat empty 3 in row as winner', () => {
-    expect(detectTicTacToeWin([['', '', ''], ['O', 'O', ''], ['X', 'O', 'X']])).toEqual(false);
-  });
-});

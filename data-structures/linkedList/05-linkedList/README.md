@@ -1,5 +1,5 @@
 # Singly Linked List
-[Table of Contents](../../README.md)
+[Table of Contents](../../../README.md)
 
 [Link to the Code](./linked-list.js)
 
