@@ -13,3 +13,4 @@ This is a collection of all my challenges for JavaScript 401.
 
 - [Data-Structures 05: Singly Linked Lists](data-structures/linkedList/05-linkedList/README.md)
 - [Data-Structures 06: Linked List Insertions](data-structures/linkedList/06-ll-insertions/README.md)
+- [Data-Structures 07: Linked List Kth from the End](data-structures/linkedList/07-kth-from-end/README.md)
