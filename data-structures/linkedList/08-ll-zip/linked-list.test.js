@@ -1,6 +1,6 @@
 'use strict';
 
-const LinkedList = require('./linked-list.js');
+const {LinkedList, zipLists} = require('./ll-zip.js');
 
 
 describe('Testing Challenge 06 Singly LinkedLists', () => {
@@ -134,7 +134,6 @@ describe('Testing Challenge 06 Singly LinkedLists', () => {
 
     });
 
-
     describe('Testing append method', () => {
 
         it('Should append to an empty linked list', () => {
@@ -207,7 +206,7 @@ describe('Testing Challenge 06 Singly LinkedLists', () => {
 });
 
 
-describe('Testing Challenge 07 Singly LinkedLists', () => {
+describe('Testing Challenge 07 Singly LinkedLists: Insertions', () => {
 
     describe('Testing kthFromEnd method', () => {
 
@@ -279,4 +278,23 @@ describe('Testing Challenge 07 Singly LinkedLists', () => {
         });
     });
 
+});
+
+describe('Testing Challenge 08 Singly LinkedLists: Zip', () => {
+    it('Should handle when list1 is empty', () => {
+        let list1 = new LinkedList();
+        let list2 = new LinkedList();
+        list2.insert(1);
+        list2.insert(2);
+        list2.insert(3);
+
+        let zipped = zipLists(list1, list2);
+
+
+        let actual = zipped.toString();
+        let expected = '{3} -> {2} -> {1} -> NULL'
+
+        expect(actual).toEqual(expected);
+
+    });
 });

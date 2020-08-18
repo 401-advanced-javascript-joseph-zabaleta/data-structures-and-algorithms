@@ -176,52 +176,69 @@ class LinkedList {
 
     };
 
-    /**
-     * ZipLists will take two linked lists and zip them together. Started with the first linked list, and alternating values until all values have been reached. Creating a new linked list with all values.
-     * @param {*} list1 A linked list
-     * @param {*} list2 A linked List
-     * @returns A single linked list with the values zipped together
-     */
-    zipLists(list1, list2){
-        if (!list1.head) {
-            return list2;
-        };
-
-        if (!list2.head) {
-            return list1;
-        };
-
-
-        let ll = new LinkedList();
-        let current1 = list1.head;
-        let current2 = list2.head;
-
-        while (current1 || current2) {
-
-            if (current1) {
-
-                if (ll.head !== null) {
-                    ll.append(current1.value);
-                } else {
-                    ll.insert(current1.value);
-                };
-
-            };
-
-            if (current2) {
-
-                if (ll.head !== null) {
-                    ll.append(current2.value);
-                } else {
-                    ll.insert(current2.value);
-                };
-
-            };
-
-        };
-    };
 
 };
 
-module.exports = LinkedList;
+/**
+* ZipLists will take two linked lists and zip them together. Started with the first linked list, and alternating values until all values have been reached. Creating a new linked list with all values.
+* @param {*} list1 A linked list
+* @param {*} list2 A linked List
+* @returns A single linked list with the values zipped together
+*/
+function zipLists(list1, list2) {
+   if (!list1.head) {
+       return list2;
+   };
+
+   if (!list2.head) {
+       return list1;
+   };
+
+
+   let ll = new LinkedList();
+   let current1 = list1.head;
+   let current2 = list2.head;
+
+   while (current1 || current2) {
+
+       if (current1) {
+
+           if (ll.head !== null) {
+               ll.append(current1.value);
+           } else {
+               ll.insert(current1.value);
+           };
+
+       };
+
+       if (current2) {
+
+           if (ll.head !== null) {
+               ll.append(current2.value);
+           } else {
+               ll.insert(current2.value);
+           };
+
+       };
+
+   };
+
+   if (current1 && current1.next) {
+       current1 = current.next;
+   } else {
+       current1 = false;
+   };
+
+   if (current2 && current2.next) {
+       current2 = current2.next;
+   } else {
+       current2 = false;
+   };
+
+   return ll;
+
+};
+
+
+module.exports = { LinkedList, zipLists };
 
