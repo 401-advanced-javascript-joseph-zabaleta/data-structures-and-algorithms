@@ -281,12 +281,29 @@ describe('Testing Challenge 07 Singly LinkedLists: Insertions', () => {
 });
 
 describe('Testing Challenge 08 Singly LinkedLists: Zip', () => {
-    it('Should handle when list1 is empty', () => {
+
+    it('Should hanlde when list1 is empty', () => {
         let list1 = new LinkedList();
         let list2 = new LinkedList();
-        list2.insert(1);
-        list2.insert(2);
+
+        list2.insert(4);
         list2.insert(3);
+        list2.insert(5);
+
+        let zipped = zipLists(list1, list2);
+
+        let actual = zipped.toString();
+        let expected = '{5} -> {3} -> {4} -> NULL';
+
+        expect(actual).toEqual(expected);
+    });
+
+    it('Should handle when list2 is empty', () => {
+        let list1 = new LinkedList();
+        let list2 = new LinkedList();
+        list1.insert(1);
+        list1.insert(2);
+        list1.insert(3);
 
         let zipped = zipLists(list1, list2);
 
@@ -295,6 +312,64 @@ describe('Testing Challenge 08 Singly LinkedLists: Zip', () => {
         let expected = '{3} -> {2} -> {1} -> NULL'
 
         expect(actual).toEqual(expected);
-
     });
+
+    it('Should handle two equal length lists', () => {
+        let list1 = new LinkedList();
+        let list2 = new LinkedList();
+        list1.insert(1);
+        list1.insert(2);
+        list1.insert(3);
+
+        list2.insert(6);
+        list2.insert(7);
+        list2.insert(8);
+
+        let zipped = zipLists(list1, list2);
+
+        let actual = zipped.toString();
+        let expected = '{3} -> {8} -> {2} -> {7} -> {1} -> {6} -> NULL';
+
+        expect(actual).toEqual(expected);
+    });
+
+
+    it('Should handle when list1 is shorter than list2', () => {
+        let list1 = new LinkedList();
+        let list2 = new LinkedList();
+        list1.insert(1);
+        list1.insert(3);
+
+        list2.insert(6);
+        list2.insert(7);
+        list2.insert(8);
+        list2.insert(9)
+
+        let zipped = zipLists(list1, list2);
+
+        let actual = zipped.toString();
+        let expected = '{3} -> {9} -> {1} -> {8} -> {7} -> {6} -> NULL';
+
+        expect(actual).toEqual(expected);
+    });
+
+    it('Should handle when list1 is longer than list2', () => {
+        let list1 = new LinkedList();
+        let list2 = new LinkedList();
+        list1.insert(1);
+        list1.insert(3);
+        list1.insert(6);
+        list1.insert(9)
+
+        list2.insert(7);
+        list2.insert(8);
+
+        let zipped = zipLists(list1, list2);
+
+        let actual = zipped.toString();
+        let expected = '{9} -> {8} -> {6} -> {7} -> {3} -> {1} -> NULL';
+
+        expect(actual).toEqual(expected);
+    });
+
 });

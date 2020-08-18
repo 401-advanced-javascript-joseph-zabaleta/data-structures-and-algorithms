@@ -212,28 +212,24 @@ function zipLists(list1, list2) {
        };
 
        if (current2) {
-
-           if (ll.head !== null) {
-               ll.append(current2.value);
-           } else {
-               ll.insert(current2.value);
-           };
-
+            ll.append(current2.value);
        };
 
-   };
 
-   if (current1 && current1.next) {
-       current1 = current.next;
-   } else {
-       current1 = false;
-   };
+       if (current1 && current1.next) {
+           current1 = current1.next;
+       } else {
+           current1 = false;
+       };
 
-   if (current2 && current2.next) {
-       current2 = current2.next;
-   } else {
-       current2 = false;
-   };
+       if (current2 && current2.next) {
+           current2 = current2.next;
+       } else {
+           current2 = false;
+       };
+
+    };
+
 
    return ll;
 
