@@ -186,39 +186,37 @@ class LinkedList {
 * @returns A single linked list with the values zipped together
 */
 function zipLists(list1, list2) {
-   if (!list1.head) {
-       return list2;
-   };
+    if (!list1.head) {
+        return list2;
+    };
 
-   if (!list2.head) {
-       return list1;
-   };
+    if (!list2.head) {
+        return list1;
+    };
 
-   let ll = new LinkedList();
-   let current1 = list1.head;
-   let current2 = list2.head;
+    let ll = list1;
+    let output = ll.head;
 
-   while (current1 || current2) {
+    let current1 = list1.head.next;
+    let current2 = list2.head;
 
-       if (current1) {
+    while (current1 || current2) {
 
-           if (ll.head !== null) {
-               ll.append(current1.value);
-           } else {
-               ll.insert(current1.value);
-           };
-
-           current1 = current1.next;
-       };
-
-       if (current2) {
-            ll.append(current2.value);
+        if (current2) {
+            output.next = current2;
+            output = output.next;
             current2 = current2.next;
-       };
+        };
+
+        if (current1) {
+            output.next = current1;
+            output = output.next;
+            current1 = current1.next;
+        };
 
     };
 
-   return ll;
+    return ll;
 
 };
 
