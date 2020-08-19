@@ -23,8 +23,7 @@ Extending the `LinkedList` class from challenge 07. Added a new method:
 ---
 
 ## Approach and Efficiency
-
-
+For this challenge I created a brand new linked list. This will take in the values from both input lists and return a single linked list. We are using a while loop to accomplish this task, our Time is O(n) as we will loop over N times dependant on the length of list1 + list2. Space is O(n) with the same dependencies as Time.
 
 ---
 

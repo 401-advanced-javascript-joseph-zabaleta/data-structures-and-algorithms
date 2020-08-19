@@ -194,7 +194,6 @@ function zipLists(list1, list2) {
        return list1;
    };
 
-
    let ll = new LinkedList();
    let current1 = list1.head;
    let current2 = list2.head;
@@ -209,27 +208,15 @@ function zipLists(list1, list2) {
                ll.insert(current1.value);
            };
 
+           current1 = current1.next;
        };
 
        if (current2) {
             ll.append(current2.value);
-       };
-
-
-       if (current1 && current1.next) {
-           current1 = current1.next;
-       } else {
-           current1 = false;
-       };
-
-       if (current2 && current2.next) {
-           current2 = current2.next;
-       } else {
-           current2 = false;
+            current2 = current2.next;
        };
 
     };
-
 
    return ll;
 
