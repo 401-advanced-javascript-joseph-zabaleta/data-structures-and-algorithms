@@ -1,7 +1,7 @@
 # Stacks and Queues
 [Table of Contents](../../../README.md)
 
-[Link to the Code](./linked-list.js)
+[Link to the Code](./stacks-and-queues.js)
 
 ---
 
@@ -13,7 +13,7 @@ This challenge deals with the Call stack and queue. We will be creating a Stack 
 ---
 
 ## Approach & Efficiency
-
+Both Stack and Queue Class utilize similiar functions. All functions are running a bigO of O(1). This is because we are doing single functions. We are not having to loop through a list which would result in a bigO of O(n). Space is also O(1). We are able to maintain the space of O(1) due to the fact we not duplicating or making a copy of the list.
 
 ---
 

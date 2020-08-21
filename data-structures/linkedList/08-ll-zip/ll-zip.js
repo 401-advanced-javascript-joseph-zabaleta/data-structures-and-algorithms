@@ -221,5 +221,5 @@ function zipLists(list1, list2) {
 };
 
 
-module.exports = { LinkedList, zipLists };
+module.exports = { LinkedList, Node, zipLists };
 

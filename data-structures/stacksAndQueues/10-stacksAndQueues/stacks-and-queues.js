@@ -220,12 +220,100 @@ class Stack {
         };
 
         let output = this.top;
+        this.top = this.top.next;
         output.next = null;
 
-        this.top = this.top.next;
 
         return output.value;
 
-    }
+    };
+
+    /**
+     * Takes no arguments and returns the value of the node located on top of the stack, without removing it from the stack.
+     */
+    peek() {
+
+        if (!this.top) {
+            throw Error('Can\'t peek an empty stack!')
+        };
+
+        return this.top.value;
+    };
+
+
+    /**
+     * Takes no arguments, and returns a boolean indicating whether or not the stack is empty.
+     */
+    isEmpty() {
+        return !Boolean(this.top);
+    };
 
 }
+
+
+class Queue {
+    constructor() {
+        this.front = null;
+        this.rear = null;
+    };
+
+    /**
+     * Takes any value as an argument and adds a new node with that value to the back of the queue with an O(1) Time Performance.
+     * @param {'*'} value
+     */
+    enqueue(value){
+
+        let node = new Node(value);
+
+        if (!this.rear) {
+            this.front = node;
+            this.rear = node;
+        } else {
+            this.rear.next = node;
+            this.rear = this.rear.next;
+        };
+
+    };
+
+
+    /**
+     * Takes no arguments, remove the node from the front of the queue, and returns the node's value.
+     */
+    dequeue(){
+
+        if (!this.front) {
+            throw Error('Can\'t dequeue from an empty queue');
+        };
+
+        let output = this.front;
+        this.front = this.front.next;
+
+        return output.value;
+
+    };
+
+
+    /**
+     * Takes no arguments and returns the value of the node located in the front of the queue, without removing it from the queue.
+     */
+    peek(){
+
+        if (!this.front) {
+            throw Error('Can\'t peek an empty queue');
+        };
+
+        return this.front.value;
+
+    };
+
+
+    /**
+     * Takes no arguments and returns a boolean indicating whether or not the queue is empty.
+     */
+    isEmpty(){
+        return !Boolean(this.front);
+    };
+}
+
+
+module.exports = {LinkedList, Stack, Queue};
