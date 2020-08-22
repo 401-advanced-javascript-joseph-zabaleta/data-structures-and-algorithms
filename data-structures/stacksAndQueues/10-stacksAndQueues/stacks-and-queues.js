@@ -1,5 +1,6 @@
 'use strict';
 
+
 /**
  * Node class handles the packaging of values
  * @class
@@ -10,6 +11,7 @@ class Node {
         this.next = next;
     };
 };
+
 
 /**
  * LinkedList creates an implementation of the linked list data structure.
@@ -83,7 +85,7 @@ class LinkedList {
 
             current = current.next;
         };
-    };
+    }
 
     /**
      * Creates a new node and inserts this node before the given value in the linked list.
@@ -174,52 +176,144 @@ class LinkedList {
 
         return follower.value;
 
+
+
+
     };
 
 
 };
 
-/**
-* ZipLists will take two linked lists and zip them together. Started with the first linked list, and alternating values until all values have been reached. Creating a new linked list with all values.
-* @param {*} list1 A linked list
-* @param {*} list2 A linked List
-* @returns A single linked list with the values zipped together
-*/
-function zipLists(list1, list2) {
-    if (!list1.head) {
-        return list2;
+
+class Stack {
+    constructor( item = null ) {
+        this.top = item;
     };
 
-    if (!list2.head) {
-        return list1;
-    };
 
-    let ll = list1;
-    let output = ll.head;
+    /**
+     * Takes in any value as an argument and adds a new node with that value to the top of the stack with an O(1) Time performance.
+     * @param {*} value
+     */
+    push(value) {
 
-    let current1 = list1.head.next;
-    let current2 = list2.head;
+        let newNode = new Node(value);
 
-    while (current1 || current2) {
-
-        if (current2) {
-            output.next = current2;
-            output = output.next;
-            current2 = current2.next;
-        };
-
-        if (current1) {
-            output.next = current1;
-            output = output.next;
-            current1 = current1.next;
+        if (this.top) {
+            newNode.next = this.top;
+            this.top = newNode;
+        } else {
+            this.top = newNode;
         };
 
     };
 
-    return ll;
+    /**
+     * Takes no arguments, removes the node from the top of the stack, and returns the node's value.
+     *
+     * Will raise an exception when called on an empty stack.
+     */
+    pop() {
 
-};
+        if (!this.top) {
+            throw Error('Can\'t pop from an empty stack!')
+        };
+
+        let output = this.top;
+        this.top = this.top.next;
+        output.next = null;
 
 
-module.exports = { LinkedList, Node, zipLists };
+        return output.value;
 
+    };
+
+    /**
+     * Takes no arguments and returns the value of the node located on top of the stack, without removing it from the stack.
+     */
+    peek() {
+
+        if (!this.top) {
+            throw Error('Can\'t peek an empty stack!')
+        };
+
+        return this.top.value;
+    };
+
+
+    /**
+     * Takes no arguments, and returns a boolean indicating whether or not the stack is empty.
+     */
+    isEmpty() {
+        return !Boolean(this.top);
+    };
+
+}
+
+
+class Queue {
+    constructor() {
+        this.front = null;
+        this.rear = null;
+    };
+
+    /**
+     * Takes any value as an argument and adds a new node with that value to the back of the queue with an O(1) Time Performance.
+     * @param {'*'} value
+     */
+    enqueue(value){
+
+        let node = new Node(value);
+
+        if (!this.rear) {
+            this.front = node;
+            this.rear = node;
+        } else {
+            this.rear.next = node;
+            this.rear = this.rear.next;
+        };
+
+    };
+
+
+    /**
+     * Takes no arguments, remove the node from the front of the queue, and returns the node's value.
+     */
+    dequeue(){
+
+        if (!this.front) {
+            throw Error('Can\'t dequeue from an empty queue');
+        };
+
+        let output = this.front;
+        this.front = this.front.next;
+
+        return output.value;
+
+    };
+
+
+    /**
+     * Takes no arguments and returns the value of the node located in the front of the queue, without removing it from the queue.
+     */
+    peek(){
+
+        if (!this.front) {
+            throw Error('Can\'t peek an empty queue');
+        };
+
+        return this.front.value;
+
+    };
+
+
+    /**
+     * Takes no arguments and returns a boolean indicating whether or not the queue is empty.
+     */
+    isEmpty(){
+        return !Boolean(this.front);
+    };
+}
+
+
+module.exports = {LinkedList, Stack, Queue};
