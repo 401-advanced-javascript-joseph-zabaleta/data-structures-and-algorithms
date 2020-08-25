@@ -19,5 +19,10 @@ The objective was to create an AnimalShelter, which is pretty much a queue imple
 
 ---
 
-## Solution
-![White Board Image](../../../assets/fifoAnimalShelter.png)
+## API
+
+- `enqueue(animal)`:
+    - This method is O(1) on both time and space complexity. This function only ever deals with reassigning pointers to the front and or the rear of the queue. No looping, no creating of new nodes. This follows the same logic of previous code challenges as for as a queue goes.
+
+- `dequeue(pref)`:
+    - This method has O(n) time complexity with O(1) space. I believe that worst case scenario the preffered animal could be at the end of the queue, resulting in a loop to the last queue'd animal. Space is untouched, we are not creating any additional animals or nodes. We are simply reassigning the pointers yet again.
