@@ -16,4 +16,4 @@ This is a collection of all my challenges for JavaScript 401.
 - [Data-Structures 10: Stacks and Queues](data-structures/stacksAndQueues/10-stacksAndQueues/README.md)
 - [Data-Structures 11: Queues with Stacks](data-structures/stacksAndQueues/11-queueWithStacks/README.md)
 - [Code-Challenge 12: Fifo Animal Shelter](code-challenges/401/12-fifoAnimalShelter/README.md)
-- [Data-Structures 13: Multi Bracket Validation]()
+- [Data-Structures 13: Multi Bracket Validation](code-challenges/401/13-multiBracketValidation/README.md)
