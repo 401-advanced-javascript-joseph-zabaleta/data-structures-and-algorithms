@@ -316,17 +316,17 @@ describe('Testing challenge 7', () => {
   });
 });
 
-describe('Testing challenge 8', () => {
-  test('It should sort people by their last names', () => {
-    expect(sortPeople(people)).toStrictEqual([
-      new Person('Casey', 'Codefellow', 38),
-      new Person('Stan', 'Seattle', 67),
-      new Person('Wes', 'Washington', 25),
-    ]);
-    expect(sortPeople([{lastName: 'banana'}, {lastName: 'apple'}]))
-      .toStrictEqual([{lastName: 'apple'}, {lastName: 'banana'}]);
-  });
-});
+// describe('Testing challenge 8', () => {
+//   test('It should sort people by their last names', () => {
+//     expect(sortPeople(people)).toStrictEqual([
+//       new Person('Casey', 'Codefellow', 38),
+//       new Person('Stan', 'Seattle', 67),
+//       new Person('Wes', 'Washington', 25),
+//     ]);
+//     expect(sortPeople([{lastName: 'banana'}, {lastName: 'apple'}]))
+//       .toStrictEqual([{lastName: 'apple'}, {lastName: 'banana'}]);
+//   });
+// });
 
 describe('Testing challenge 9', () => {
   test('It should sort people with more strict ordering', () => {
