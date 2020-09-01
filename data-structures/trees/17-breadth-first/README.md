@@ -16,4 +16,4 @@ To accomplish this type of traversal , we are utilizing a queue to keep track of
 ---
 
 ## Solution
-![White Board Image]()
+![White Board Image](../../../assets/breadthFirst.png)
