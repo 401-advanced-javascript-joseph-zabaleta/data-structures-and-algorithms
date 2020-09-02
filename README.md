@@ -20,4 +20,5 @@ This is a collection of all my challenges for JavaScript 401.
 - Code Challenge 14: Mock Whiteboard Interview Day
 - [Data Structures 15: Trees](data-structures/trees/15-trees/README.md)
 - [Data Structures 16: Binary Tree Find Maximum](data-structures/trees/16-find-maximum/README.md)
-
+- [Data Structures 17: Breadth First Method](data-structures/trees/17-breadth-first/README.md)
+- [Data Structures 18: FizzBuzz Tree](data-structures/trees/18-fizz-buzz-tree/README.md)
