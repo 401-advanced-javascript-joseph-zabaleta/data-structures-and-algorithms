@@ -143,13 +143,9 @@ class BinaryTree {
             let front = q.dequeue();
             collection.push(front.value);
 
-            if (front.left) {
-                q.enqueue(front.left)
-            };
+            if (front.left) q.enqueue(front.left);
 
-            if (front.right) {
-                q.enqueue(front.right)
-            } ;
+            if (front.right) q.enqueue(front.right);
 
         };
 
