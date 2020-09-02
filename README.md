@@ -18,4 +18,6 @@ This is a collection of all my challenges for JavaScript 401.
 - [Code Challenge 12: Fifo Animal Shelter](code-challenges/401/12-fifoAnimalShelter/README.md)
 - [Data Structures 13: Multi Bracket Validation](code-challenges/401/13-multiBracketValidation/README.md)
 - Code Challenge 14: Mock Whiteboard Interview Day
-- [Data Structures: 15: Trees](data-structures/trees/15-trees/README.md)
+- [Data Structures 15: Trees](data-structures/trees/15-trees/README.md)
+- [Data Structures 16: Binary Tree Find Maximum](data-structures/trees/16-find-maximum/README.md)
+
