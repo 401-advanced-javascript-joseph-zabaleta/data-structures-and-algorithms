@@ -1,22 +1,44 @@
 'use strict';
 
-/**
- * Takes in an array and performs an insertion sort algorithm to sort the array.
- * @param {*} arr
- */
-function insertSort(arr) {
+const insertionSort = require('./insertion-sort.js');
 
-    for (i = 1; i < arr.length; i++) {
+describe('Testing Challenge 26: Insertion Sort: ', () => {
 
-        let j = i - 1;
-        let temp = arr[i];
 
-        while (j >= 0 & temp < arr[j]) {
-            arr[j + 1] = arr[j]
-            j -= 1;
+    it('Should handle the sample array', () => {
+        let arr = [8,4,23,42,16,15]
+        insertionSort(arr);
+        let expected = [4, 8, 15, 16, 23, 42];
 
-            arr[j + 1] = temp;
-        };
+        expect(arr).toEqual(expected);
+    });
 
-    };
-};
+
+    it('Should handle a reversed array', () => {
+        let arr = [20, 18, 12, 8, 5, -2]
+        insertionSort(arr);
+        let expected = [-2, 5, 8, 12, 18, 20];
+
+        expect(arr).toEqual(expected);
+    });
+
+
+    it('Should handle a few uniques', () => {
+        let arr = [5,12,7,5,5,7];
+        insertionSort(arr);
+        let expected = [5, 5, 5, 7, 7, 12];
+
+        expect(arr).toEqual(expected);
+    });
+
+
+    it('Should handle nearly sorted array', () => {
+        let arr = [2,3,5,7,13,11]
+        insertionSort(arr);
+        let expected = [2, 3, 5, 7, 11, 13];
+
+        expect(arr).toEqual(expected);
+    });
+
+
+});
