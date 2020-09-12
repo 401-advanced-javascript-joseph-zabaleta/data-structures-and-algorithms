@@ -10,7 +10,7 @@ describe('Testing Challenge 27 Merge Sort: ', () => {
         mergeSort(arr);
         let expected = [4, 8, 15, 16, 23, 42];
 
-        expected(arr).toEqual(expected);
+        expect(arr).toEqual(expected);
     });
 
 
@@ -19,7 +19,7 @@ describe('Testing Challenge 27 Merge Sort: ', () => {
         mergeSort(arr);
         let expected = [-2, 5, 8, 12, 18, 20];
 
-        expected(arr).toEqual(expected);
+        expect(arr).toEqual(expected);
     });
 
 
@@ -28,7 +28,7 @@ describe('Testing Challenge 27 Merge Sort: ', () => {
         mergeSort(arr);
         let expected = [5, 5, 5, 7, 7, 12];
 
-        expected(arr).toEqual(expected);
+        expect(arr).toEqual(expected);
     });
 
 
@@ -37,7 +37,7 @@ describe('Testing Challenge 27 Merge Sort: ', () => {
         mergeSort(arr);
         let expected = [2, 3, 5, 7, 11, 13];
 
-        expected(arr).toEqual(expected);
+        expect(arr).toEqual(expected);
     });
 
 
