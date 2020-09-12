@@ -50,7 +50,7 @@ ALGORITHM Merge(left, right, arr)
 ---
 
 ## Approach & Efficiency
-
+The approach to merge sort, is that given a list we split the list into halves. We continue to split the lists in half until the length of 1 is reached, then we begin to merge them back together based on value. Time complexity for this type of function results in O(log(n)) since it is similiary to a binary tree, continually splitting on it self. Space however remains unchanged. Yes we split the lists each time, but we are not adding too the lists, so the size never changes, and in the end, we take up the same amount of space it had before. Since we split a list down to single elements, we get a space complexity of O(n) but then as we merge this list back together, we return to the original list space.
 
 ---
 
