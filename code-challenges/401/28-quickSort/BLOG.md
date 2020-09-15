@@ -31,9 +31,14 @@ Inside partition, we loop through the array and compare each value to he pivot a
 
 ---
 
+### Summary
+- Utilizes the divide and conquer paradigm
+- Split the incoming array into two sub arrays and sort them individually by recursiving calling the quicksort method.
+- After sort, combine the sub arrays back to into one sorted array
+
 
 ## Efficency
-* Time O(n)
+* Time O(n^2)
 - The basic algorithm for Quick Sort is to partition the list based ona pivot value, and utilizing recursion to break this list down sorting smaller numbers to the left of the pivot and larger numbers to the right. First time through a position is deteremined, and then recursion on main function is called to sort the left then the right based on exact pivot location. This will result in a O(n) performance as we are touching each part, utilzing a for loop.
 * Space O(n)
     - The space can vary based on the type of quick sort used, in this version of quick sort we have a set pivot over a random pivot. Now the best space complexity still is O(n) as the fixed pivot could be the lowest number.
