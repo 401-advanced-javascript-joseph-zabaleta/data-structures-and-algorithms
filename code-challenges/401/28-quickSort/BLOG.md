@@ -6,7 +6,7 @@ Checkout official README: [README Link](./README.md)
 ---
 
 ## Pseudocode
-![code](/assets/quick_sort/pseudo_code.png)
+![code](../../../assets/quickSort/pseudo_code.png)
 
 ---
 
@@ -14,14 +14,14 @@ Checkout official README: [README Link](./README.md)
  Sample Array: `[8,4,23,42,16,15]`
 
 ### Pass 1:
-![pass 1](/assets/quick_sort/pass_1.png)
+![pass 1](../../../assets/quickSort/pass_1.png)
 
 Quick sort is mainly focused around the partition function inside. In this illustration above I have drawn the flow of the function. First we have the invocation of quicksort. Second we need to define a pivot variable, and we are calling the partition function. This function is doing all the work. Inside this function we have a for loop, that will loop for the length of the list, and will swap current index with the next index based on value.
 
 ---
 
 ### Pass 2:
-![pass 2](/assets/quick_sort/pass_2.png)
+![pass 2](../../../assets/quickSort/pass_2.png)
 
 Once the for loop has completed, we have keeping track of the low value. We now enter function 4, which is the last function inside partition. We do the same process now swapping the right of the pivot. Once complete, we hit the return block for position returning an integer.
 
