@@ -1,4 +1,4 @@
-# Trees
+# Hashtables
 [Table of Contents](../../../README.md)
 
 [Link to the Code](./trees.js)

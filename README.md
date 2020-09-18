@@ -25,3 +25,5 @@ This is a collection of all my challenges for JavaScript 401.
 - [Code Challenge 26: Insertion Sort](code-challenges/401/26-insertionSort/README.md)
 - [Code Challenge 27: Merge Sort](code-challenges/401/27-mergeSort/README.md)
 - [Code Challenge 28: Quick Sort](code-challenges/401/28-quickSort/README.md)
+- Code Challenge 29: Mock Whiteboard Interview Day
+- [Code Challenge 29: Hashtables](data-structures/hashtable/README.md)
