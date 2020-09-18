@@ -1,6 +1,6 @@
 'use strict';
 
-import Hashtable from './hashtable.js';
+const Hashtable = require('./hashtable.js');
 
 describe('Testing challenge 30: Hashtables: ', () => {
 
@@ -112,7 +112,7 @@ describe('Testing challenge 30: Hashtables: ', () => {
             let actual = [actual1, actual2];
             let expected = [1, 13];
 
-            expected(actual).toEqual(expected);
+            expect(actual).toEqual(expected);
 
         });
 
