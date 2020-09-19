@@ -22,3 +22,6 @@ This is a collection of all my challenges for JavaScript 401.
 - [Data Structures 16: Binary Tree Find Maximum](data-structures/trees/16-find-maximum/README.md)
 - [Data Structures 17: Breadth First Method](data-structures/trees/17-breadth-first/README.md)
 - [Data Structures 18: FizzBuzz Tree](data-structures/trees/18-fizz-buzz-tree/README.md)
+- [Code Challenge 26: Insertion Sort](code-challenges/401/26-insertionSort/README.md)
+- [Code Challenge 27: Merge Sort](code-challenges/401/27-mergeSort/README.md)
+- [Code Challenge 28: Quick Sort](code-challenges/401/28-quickSort/README.md)
