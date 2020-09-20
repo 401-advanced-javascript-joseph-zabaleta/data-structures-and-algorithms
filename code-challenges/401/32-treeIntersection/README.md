@@ -7,11 +7,7 @@
 ---
 
 ## Challenge 32
-
-
-
-## Features
-
+Find common values in two binary trees.
 
 ---
 
