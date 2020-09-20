@@ -6,7 +6,7 @@ const treeIntersection = require('./tree-intersection.js');
 
 describe('Testing Challenge 32: Tree intersection', () => {
 
-    it('Should handle example #1', () => {
+    it.only('Should handle example #1', () => {
 
         let tree1 = new BinarySearchTree();
         tree1.add(150);
