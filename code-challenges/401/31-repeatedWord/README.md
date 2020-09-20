@@ -33,4 +33,4 @@ Repeated_word takes in an initial string, to get a list of words we must split t
 
 ## Solution
 
-![whiteboard}]()
+![whiteboard}](../../../assets/repeated_word.png);
