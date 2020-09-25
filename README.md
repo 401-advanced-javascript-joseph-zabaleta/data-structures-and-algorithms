@@ -28,4 +28,5 @@ This is a collection of all my challenges for JavaScript 401.
 - Code Challenge 29: Mock Whiteboard Interview Day
 - [Code Challenge 30: Hashtables](data-structures/hashtable/README.md)
 - [Code Challenge 31: Repeated Words](code-challenges/401/31-repeatedWord/README.md)
-- [Code Challenge 32: Tree Intersection](code-challenge/401/32-treeIntersection/README.md)
+- [Code Challenge 32: Tree Intersection](code-challenges/401/32-treeIntersection/README.md)
+- [Code Challenge 33: Left Join](code-challenges/401/33-leftJoin/README.md)
