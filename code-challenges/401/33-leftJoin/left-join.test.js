@@ -36,7 +36,7 @@ describe('Testing Challenge 33: Left Join', () => {
     });
 
 
-    it('Should handle example input #1', () => {
+    it('Should handle example input #1 version 2', () => {
 
         let hashmap1 = {
             'fond': 'averse',

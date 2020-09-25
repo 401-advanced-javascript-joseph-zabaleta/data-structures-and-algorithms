@@ -34,6 +34,9 @@ describe('Testing Challenge 32: Tree intersection', () => {
         tree2.add(4);
         tree2.add(500);
 
+        console.log(tree1)
+        console.log(tree2)
+
         let actual = treeIntersection(tree1, tree2);
         let expected = [100, 160, 200, 350, 125, 175, 500]
 
