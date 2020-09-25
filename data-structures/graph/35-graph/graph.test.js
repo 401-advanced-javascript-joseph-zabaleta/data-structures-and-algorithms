@@ -117,10 +117,10 @@ describe('Testing Challenge 35: Graph: ', () => {
         it('Should handle no neighbors', () => {
 
             let g = new Graph();
-            let nodeA = g.add('a');
-            let nodeB = g.add('b');
-            let nodeC = g.add('c');
-            let nodeD = g.add('d');
+            let nodeA = g.addNode('a');
+            let nodeB = g.addNode('b');
+            let nodeC = g.addNode('c');
+            let nodeD = g.addNode('d');
 
             g.addEdge(nodeA, nodeB);
             let actual = g.getNeighbors(nodeA);
@@ -134,10 +134,10 @@ describe('Testing Challenge 35: Graph: ', () => {
         it('Should handle no neighbors', () => {
 
             let g = new Graph();
-            let nodeA = g.add('a');
-            let nodeB = g.add('b');
-            let nodeC = g.add('c');
-            let nodeD = g.add('d');
+            let nodeA = g.addNode('a');
+            let nodeB = g.addNode('b');
+            let nodeC = g.addNode('c');
+            let nodeD = g.addNode('d');
 
             let actual = g.getNeighbors(nodeA);
             let expected = [];
@@ -149,12 +149,13 @@ describe('Testing Challenge 35: Graph: ', () => {
     });
 
 
-    describe('Testing size() method: ', () => {
+    describe.only('Testing size() method: ', () => {
 
         it('Should show a size of 1', () => {
 
             let g = new Graph()
             g.addNode('banana');
+            g.addNode(1);
             let actual = g.size();
             let expected = 1;
 
