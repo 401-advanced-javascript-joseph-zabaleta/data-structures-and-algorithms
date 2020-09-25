@@ -4,10 +4,6 @@ const { Queue } = require('../../../data-structures/stacksAndQueues/10-stacksAnd
 
 function treeIntersection(root1, root2) {
 
-    console.log('tree1', root1.breadthFirst())
-    console.log('tree2', root2.breadthFirst())
-
-
     let output = [];
     let collection1 = [];
     let collection2 = [];
