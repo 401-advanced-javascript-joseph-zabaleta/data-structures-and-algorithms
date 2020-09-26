@@ -30,7 +30,7 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 ---
 
 ## Approach & Efficiency
-
+Graph is using a hashmap to stores in data. It has 5 methods which are add_node(), add_edge(), get_nodes(), get_neighbors(), size(). All operations are O(1) time complexity except for get_neightbors(). Getting the neighsbors has a for loop inside of it that is looping over the list of edges that a particular node has, and gathering the weight values for the output.
 
 ---
 

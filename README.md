@@ -30,3 +30,5 @@ This is a collection of all my challenges for JavaScript 401.
 - [Code Challenge 31: Repeated Words](code-challenges/401/31-repeatedWord/README.md)
 - [Code Challenge 32: Tree Intersection](code-challenges/401/32-treeIntersection/README.md)
 - [Code Challenge 33: Left Join](code-challenges/401/33-leftJoin/README.md)
+- Code Challenge 34: Mock Whiteboard Interview Day
+- [Code Challenge 35: Graph](data-structures/graph/35-graph/README.md)
