@@ -1,6 +1,7 @@
 'use strict';
 
-const Graph = require('./breadth-first-graph.js');
+const Graph = require('../36-breadthFirstGraph/breadth-first-graph.js');
+const getEdges = require('./get-edges.js');
 
 
 describe('Testing Challenge 35: Graph: ', () => {
@@ -281,6 +282,206 @@ describe('Testing Challenge 36: Breath First Graph: ', () => {
             expect(actual).toEqual(expected);
 
         });
+
+    });
+
+});
+
+
+describe('Testing Challenge 37: getEdges: ', () => {
+
+
+    it('Should handle example #1', () => {
+
+
+        let g = new Graph()
+        let pandora = g.addNode('Pandora')
+        let adrendelle = g.addNode('Arendelle')
+        let metroville = g.addNode('Metroville')
+        let monstroplolis = g.addNode('Monstroplolis')
+        let naboo = g.addNode('Naboo')
+        let narnia = g.addNode('Narnia')
+
+
+        g.addEdge(pandora, adrendelle, 150)
+        g.addEdge(pandora, metroville, 82)
+        g.addEdge(adrendelle, pandora, 150)
+        g.addEdge(adrendelle, metroville, 99)
+        g.addEdge(adrendelle, monstroplolis, 42)
+        g.addEdge(metroville, pandora, 82)
+        g.addEdge(metroville, adrendelle, 99)
+        g.addEdge(metroville, monstroplolis, 105)
+        g.addEdge(metroville, naboo, 26)
+        g.addEdge(metroville, narnia, 37)
+        g.addEdge(monstroplolis, metroville, 73)
+        g.addEdge(monstroplolis, adrendelle, 42)
+        g.addEdge(monstroplolis, naboo, 73)
+        g.addEdge(naboo, monstroplolis, 73)
+        g.addEdge(naboo, metroville, 26)
+        g.addEdge(naboo, narnia, 250)
+        g.addEdge(narnia, naboo, 250)
+        g.addEdge(narnia, metroville, 37)
+
+        let actual = getEdges(g, [metroville, pandora])
+        let expected = [true, '$82'];
+
+        expect(actual).toEqual(expected);
+
+    });
+
+
+    it('Should handle example #2', () => {
+
+
+        let g = new Graph()
+        let pandora = g.addNode('Pandora')
+        let adrendelle = g.addNode('Arendelle')
+        let metroville = g.addNode('Metroville')
+        let monstroplolis = g.addNode('Monstroplolis')
+        let naboo = g.addNode('Naboo')
+        let narnia = g.addNode('Narnia')
+
+
+        g.addEdge(pandora, adrendelle, 150)
+        g.addEdge(pandora, metroville, 82)
+        g.addEdge(adrendelle, pandora, 150)
+        g.addEdge(adrendelle, metroville, 99)
+        g.addEdge(adrendelle, monstroplolis, 42)
+        g.addEdge(metroville, pandora, 82)
+        g.addEdge(metroville, adrendelle, 99)
+        g.addEdge(metroville, monstroplolis, 105)
+        g.addEdge(metroville, naboo, 26)
+        g.addEdge(metroville, narnia, 37)
+        g.addEdge(monstroplolis, metroville, 73)
+        g.addEdge(monstroplolis, adrendelle, 42)
+        g.addEdge(monstroplolis, naboo, 73)
+        g.addEdge(naboo, monstroplolis, 73)
+        g.addEdge(naboo, metroville, 26)
+        g.addEdge(naboo, narnia, 250)
+        g.addEdge(narnia, naboo, 250)
+        g.addEdge(narnia, metroville, 37)
+
+        let actual = getEdges(g, [adrendelle, monstroplolis, naboo])
+        let expected = [true, '$115'];
+
+        expect(actual).toEqual(expected);
+
+    });
+
+
+    it('Should handle example #3', () => {
+
+
+        let g = new Graph()
+        let pandora = g.addNode('Pandora')
+        let adrendelle = g.addNode('Arendelle')
+        let metroville = g.addNode('Metroville')
+        let monstroplolis = g.addNode('Monstroplolis')
+        let naboo = g.addNode('Naboo')
+        let narnia = g.addNode('Narnia')
+
+
+        g.addEdge(pandora, adrendelle, 150)
+        g.addEdge(pandora, metroville, 82)
+        g.addEdge(adrendelle, pandora, 150)
+        g.addEdge(adrendelle, metroville, 99)
+        g.addEdge(adrendelle, monstroplolis, 42)
+        g.addEdge(metroville, pandora, 82)
+        g.addEdge(metroville, adrendelle, 99)
+        g.addEdge(metroville, monstroplolis, 105)
+        g.addEdge(metroville, naboo, 26)
+        g.addEdge(metroville, narnia, 37)
+        g.addEdge(monstroplolis, metroville, 73)
+        g.addEdge(monstroplolis, adrendelle, 42)
+        g.addEdge(monstroplolis, naboo, 73)
+        g.addEdge(naboo, monstroplolis, 73)
+        g.addEdge(naboo, metroville, 26)
+        g.addEdge(naboo, narnia, 250)
+        g.addEdge(narnia, naboo, 250)
+        g.addEdge(narnia, metroville, 37)
+
+        let actual = getEdges(g, [narnia, adrendelle, naboo])
+        let expected = [false, '$0'];
+
+        expect(actual).toEqual(expected);
+
+    });
+
+
+    it('Should handle example #4', () => {
+
+
+        let g = new Graph()
+        let pandora = g.addNode('Pandora')
+        let adrendelle = g.addNode('Arendelle')
+        let metroville = g.addNode('Metroville')
+        let monstroplolis = g.addNode('Monstroplolis')
+        let naboo = g.addNode('Naboo')
+        let narnia = g.addNode('Narnia')
+
+
+        g.addEdge(pandora, adrendelle, 150)
+        g.addEdge(pandora, metroville, 82)
+        g.addEdge(adrendelle, pandora, 150)
+        g.addEdge(adrendelle, metroville, 99)
+        g.addEdge(adrendelle, monstroplolis, 42)
+        g.addEdge(metroville, pandora, 82)
+        g.addEdge(metroville, adrendelle, 99)
+        g.addEdge(metroville, monstroplolis, 105)
+        g.addEdge(metroville, naboo, 26)
+        g.addEdge(metroville, narnia, 37)
+        g.addEdge(monstroplolis, metroville, 73)
+        g.addEdge(monstroplolis, adrendelle, 42)
+        g.addEdge(monstroplolis, naboo, 73)
+        g.addEdge(naboo, monstroplolis, 73)
+        g.addEdge(naboo, metroville, 26)
+        g.addEdge(naboo, narnia, 250)
+        g.addEdge(narnia, naboo, 250)
+        g.addEdge(narnia, metroville, 37)
+
+        let actual = getEdges(g, [naboo, pandora])
+        let expected = [false, '$0'];
+
+        expect(actual).toEqual(expected);
+
+    });
+
+
+    it('Should handle example around the world', () => {
+
+
+        let g = new Graph()
+        let pandora = g.addNode('Pandora')
+        let adrendelle = g.addNode('Arendelle')
+        let metroville = g.addNode('Metroville')
+        let monstroplolis = g.addNode('Monstroplolis')
+        let naboo = g.addNode('Naboo')
+        let narnia = g.addNode('Narnia')
+
+
+        g.addEdge(pandora, adrendelle, 150)
+        g.addEdge(pandora, metroville, 82)
+        g.addEdge(adrendelle, pandora, 150)
+        g.addEdge(adrendelle, metroville, 99)
+        g.addEdge(adrendelle, monstroplolis, 42)
+        g.addEdge(metroville, pandora, 82)
+        g.addEdge(metroville, adrendelle, 99)
+        g.addEdge(metroville, monstroplolis, 105)
+        g.addEdge(metroville, naboo, 26)
+        g.addEdge(metroville, narnia, 37)
+        g.addEdge(monstroplolis, metroville, 73)
+        g.addEdge(monstroplolis, adrendelle, 42)
+        g.addEdge(monstroplolis, naboo, 73)
+        g.addEdge(naboo, monstroplolis, 73)
+        g.addEdge(naboo, metroville, 26)
+        g.addEdge(naboo, narnia, 250)
+        g.addEdge(narnia, naboo, 250)
+        g.addEdge(narnia, metroville, 37)
+
+        let actual = getEdges(g, [pandora, metroville, narnia, naboo, monstroplolis, adrendelle, pandora])
+        let expected = [true, '$634'];
+
+        expect(actual).toEqual(expected);
 
     });
 
