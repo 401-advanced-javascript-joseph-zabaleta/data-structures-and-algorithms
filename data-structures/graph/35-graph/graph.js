@@ -36,7 +36,7 @@ class Graph {
     addNode(value) {
 
         let node = new Vertex(value);
-        this.graph[node] = [];
+        this.graph[node.value] = [];
 
         return node;
 
@@ -45,20 +45,20 @@ class Graph {
 
     addEdge(vertex1, vertex2, weight = 1) {
 
-        if (!graph[vertex1]) {
+        if (!this.graph[vertex1.value]) {
 
             throw Error('Error Vertex 1 is not within the Graph');
 
         };
 
-        if (!graph[vertex2]) {
+        if (!this.graph[vertex2.value]) {
 
             throw Error('Error Vertex 2 is not within the Graph');
 
         };
 
         let edge = new Edge(vertex2, weight);
-        this.graph[vertex1].push(edge);
+        this.graph[vertex1.value].push(edge);
 
     };
 
@@ -73,7 +73,7 @@ class Graph {
     getNeighbors(vertex) {
 
         let collection = [];
-        let connections = this.graph.get(vertex, []);
+        let connections = this.graph[vertex.value];
 
         connections.forEach(neighbor => {
 

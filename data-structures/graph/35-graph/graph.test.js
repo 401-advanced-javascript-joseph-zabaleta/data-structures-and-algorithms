@@ -123,7 +123,7 @@ describe('Testing Challenge 35: Graph: ', () => {
             let nodeD = g.addNode('d');
 
             g.addEdge(nodeA, nodeB);
-            let actual = g.getNeighbors(nodeA);
+            let actual = g.getNeighbors(nodeA).length;
             let expected = 1;
 
             expect(actual).toEqual(expected);
@@ -149,7 +149,7 @@ describe('Testing Challenge 35: Graph: ', () => {
     });
 
 
-    describe.only('Testing size() method: ', () => {
+    describe('Testing size() method: ', () => {
 
         it('Should show a size of 1', () => {
 
@@ -157,7 +157,7 @@ describe('Testing Challenge 35: Graph: ', () => {
             g.addNode('banana');
             g.addNode(1);
             let actual = g.size();
-            let expected = 1;
+            let expected = 2;
 
             expect(actual).toEqual(expected);
 
