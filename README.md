@@ -32,3 +32,6 @@ This is a collection of all my challenges for JavaScript 401.
 - [Code Challenge 33: Left Join](code-challenges/401/33-leftJoin/README.md)
 - Code Challenge 34: Mock Whiteboard Interview Day
 - [Code Challenge 35: Graph](data-structures/graph/35-graph/README.md)
+- [Code Challenge 36: Breadth First Graph](data-structures/graph/36-breadthFirstGraph/README.md)
+- [Code Challenge 37: Get Edges Graph](data-structures/graph/37-getEdges/README.md)
+- [Code Challenge 38: Depth First Graph](data-structures/graph/38-depthFirst/README.md)
